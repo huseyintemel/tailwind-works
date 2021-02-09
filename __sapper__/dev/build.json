@@ -2,7 +2,7 @@
   "bundler": "rollup",
   "shimport": "2.0.4",
   "assets": {
-    "main": "client.b6fdee59.js"
+    "main": "client.b73b8696.js"
   },
   "css": {
     "main": [
@@ -11,29 +11,33 @@
   },
   "dependencies": {
     "index.svelte": [
-      "index.6c117ccb.js",
+      "index.9cd02473.js",
       "inject_styles.5607aec6.js",
       "index-0e987cf3.css"
     ],
+    "twitter-messages.svelte": [
+      "twitter-messages.9aaf66d9.js",
+      "inject_styles.5607aec6.js"
+    ],
     "airtable.svelte": [
-      "airtable.cd6fb1c3.js",
+      "airtable.1957771a.js",
       "inject_styles.5607aec6.js"
     ],
     "notionso.svelte": [
-      "notionso.30777e7d.js",
+      "notionso.4d07c49d.js",
       "inject_styles.5607aec6.js"
     ],
     "about.svelte": [
-      "about.8f474cf8.js",
+      "about.2b851822.js",
       "inject_styles.5607aec6.js"
     ],
     "blog/index.svelte": [
-      "index.603e0e69.js",
+      "index.a38cb6d6.js",
       "inject_styles.5607aec6.js",
       "index-bd6bbc1f.css"
     ],
     "blog/[slug].svelte": [
-      "[slug].11ed8ab8.js",
+      "[slug].d0f48de3.js",
       "inject_styles.5607aec6.js",
       "[slug]-a6bd454b.css"
     ]
