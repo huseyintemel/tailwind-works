@@ -1,0 +1,14 @@
+{
+  "appId": "com.hello.svelte",
+  "appName": "Hi Svelte",
+  "bundledWebRuntime": false,
+  "npmClient": "npm",
+  "webDir": "__sapper__/build",
+  "plugins": {
+    "SplashScreen": {
+      "launchShowDuration": 0
+    }
+  },
+  "cordova": {}
+  
+}

@@ -1,0 +1,41 @@
+{
+  "bundler": "rollup",
+  "shimport": "2.0.4",
+  "assets": {
+    "main": "client.6179a70f.js"
+  },
+  "css": {
+    "main": [
+      "client-1d422e01.css"
+    ]
+  },
+  "dependencies": {
+    "index.svelte": [
+      "index.acb9218e.js",
+      "inject_styles.5607aec6.js",
+      "index-0e987cf3.css"
+    ],
+    "airtable.svelte": [
+      "airtable.ba5af754.js",
+      "inject_styles.5607aec6.js"
+    ],
+    "notionso.svelte": [
+      "notionso.3f0499f2.js",
+      "inject_styles.5607aec6.js"
+    ],
+    "about.svelte": [
+      "about.f1fc8cac.js",
+      "inject_styles.5607aec6.js"
+    ],
+    "blog/index.svelte": [
+      "index.658d0c40.js",
+      "inject_styles.5607aec6.js",
+      "index-bd6bbc1f.css"
+    ],
+    "blog/[slug].svelte": [
+      "[slug].a0f6540a.js",
+      "inject_styles.5607aec6.js",
+      "[slug]-a6bd454b.css"
+    ]
+  }
+}
