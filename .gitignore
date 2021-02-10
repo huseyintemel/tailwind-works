@@ -1,5 +1,5 @@
-# Logs
 /__sapper__/
+/__sapper__/dev/
 logs
 *.log
 npm-debug.log*
