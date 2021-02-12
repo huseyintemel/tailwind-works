@@ -59,6 +59,13 @@
 		<li><a aria-current="{segment === 'notionso' ? 'page' : undefined}" href="notionso">notionso</a></li>
 		<li><a aria-current="{segment === 'airtable' ? 'page' : undefined}" href="airtable">airtable</a></li>
 		<li><a aria-current="{segment === 'twitter-messages' ? 'page' : undefined}" href="twitter-messages">twitter messages</a></li>
+		<li><a aria-current="{segment === 'zomato' ? 'page' : undefined}" href="zomato">zomato</a></li>
+		<li><a aria-current="{segment === 'linkedin-profile' ? 'page' : undefined}" href="linkedin-profil">linkedin profil</a></li>
+		<li><a aria-current="{segment === 'twitter-explore' ? 'page' : undefined}" href="twitter-explore">twitter-explore</a></li>
+		<li><a aria-current="{segment === 'facebook-groups' ? 'page' : undefined}" href="facebook-groups">facebook groups</a></li>
+		<li><a aria-current="{segment === 'edx-courses' ? 'page' : undefined}" href="edx-courses">edx</a></li>
+		<li><a aria-current="{segment === 'twitter-settings' ? 'page' : undefined}" href="twitter-settings">twitter-settings</a></li>
+
 
 
 	</ul>
