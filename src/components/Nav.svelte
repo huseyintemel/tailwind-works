@@ -67,6 +67,7 @@
 		<li><a aria-current="{segment === 'twitter-settings' ? 'page' : undefined}" href="twitter-settings">twitter-settings</a></li>
 		<li><a aria-current="{segment === 'tedx' ? 'page' : undefined}" href="tedx">tedx</a></li>
 		<li><a aria-current="{segment === 'stackexchange' ? 'page' : undefined}" href="stackexchange">stackexchange</a></li>
+		<li><a aria-current="{segment === 'posts' ? 'page' : undefined}" href="posts">posts</a></li>
 
 
 
