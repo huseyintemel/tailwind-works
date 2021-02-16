@@ -68,6 +68,7 @@
 		<li><a aria-current="{segment === 'tedx' ? 'page' : undefined}" href="tedx">tedx</a></li>
 		<li><a aria-current="{segment === 'stackexchange' ? 'page' : undefined}" href="stackexchange">stackexchange</a></li>
 		<li><a aria-current="{segment === 'posts' ? 'page' : undefined}" href="posts">posts</a></li>
+		<li><a aria-current="{segment === 'github-login' ? 'page' : undefined}" href="github-login">github-login</a></li>
 
 
 
