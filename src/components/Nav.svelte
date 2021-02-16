@@ -65,6 +65,8 @@
 		<li><a aria-current="{segment === 'facebook-groups' ? 'page' : undefined}" href="facebook-groups">facebook groups</a></li>
 		<li><a aria-current="{segment === 'edx-courses' ? 'page' : undefined}" href="edx-courses">edx</a></li>
 		<li><a aria-current="{segment === 'twitter-settings' ? 'page' : undefined}" href="twitter-settings">twitter-settings</a></li>
+		<li><a aria-current="{segment === 'tedx' ? 'page' : undefined}" href="tedx">tedx</a></li>
+		<li><a aria-current="{segment === 'stackexchange' ? 'page' : undefined}" href="stackexchange">stackexchange</a></li>
 
 
 
