@@ -5,6 +5,8 @@
     import GithubRepoItems from "../components/GithubRepoItems.svelte";
     import GithubCommentItem from "../components/GithubCommentItem.svelte";
     import GithubSidebarItem from "../components/GithubSidebarItem.svelte";
+    import GithubAddCommentIconItem from "../components/GithubAddCommentIconItem.svelte";
+    import GithubAddCommentIcons from "../components/GithubAddCommentIcons.svelte";
 </script>
 <GithubNav />
 <div class="flex flex-col">
@@ -28,8 +30,10 @@
             <GithubRepoItems />
         </div>
     </div>
-    <div class="flex flex-col divide-y px-4 lg:px-8 mt-8 mb-12">
-        <GithubIssuesHeader />
+    <div class="flex flex-col px-4 lg:px-8 mt-8 mb-12">
+        <div class="border-b">
+            <GithubIssuesHeader />
+        </div>
         <div class="flex flex-col md:flex-row space-x-0 md:space-x-4 space-y-4 md:space-y-0 w-full h-full px-0 lg:px-8 pt-8">
             <div class="w-full md:w-3/4 flex-shrink-0">
                 <GithubCommentItem personName={"kevmodrome"} firstLabel={"Collaborator"} hasLike={true} likeCount={"2"} commentDate={"2 Sep 2020"} commentText={"Should we try to move this stuff over to sveltesociety?"} personImgSrc={"https://avatars.githubusercontent.com/u/534488?s=88&u=5b55eb8ff531f5295289e01d0061583c33e8c81d&v=4"}/>
@@ -43,6 +47,37 @@
                 <GithubCommentItem personName={"kevmodrome"} firstLabel={"Collaborator"} hasSecondLabel={true} secondLabel={"Author"} commentDate={"2 Sep 2020"} commentText={"It's not going away, don't worry! There's already a semi-working component page on the sveltesociety website: <br> <a href=https://sveltesociety.dev/components>https://sveltesociety.dev/components</a> <br> You're very welcome to take it to the finish line! :)"} personImgSrc={"https://avatars.githubusercontent.com/u/534488?s=88&u=5b55eb8ff531f5295289e01d0061583c33e8c81d&v=4"} />
                 <div class="bg-gray-200 w-0.5 h-8 ml-20 -mx-6"></div>
                 <GithubCommentItem personName={"TheComputerM"} firstLabel={"Contributor"} hasLabel={false} commentDate={"1 Oct 2020"} commentText={"If you want you can take showcase entries from here. This has a very easy contributing process to add new entries."} personImgSrc={"https://avatars.githubusercontent.com/u/24741538?s=88&u=562d93c8591884c87c12beceffab21aef657826b&v=4"} />
+                <div class="bg-gray-200 w-0.5 h-8 ml-20 -mx-6"></div>
+                <div class="flex flex-col space-y-2">
+                    <div class="flex flex-row items-center space-x-4">
+                        <div class="w-8 h-8 ml-16 p-2 rounded-full bg-gray-200">
+                            <svg class="w-4 h-4 text-gray-400 fill-current" aria-hidden="true" viewBox="0 0 16 16" version="1.1" data-view-component="true">
+                                <path fill-rule="evenodd" d="M16 1.25v4.146a.25.25 0 01-.427.177L14.03 4.03l-3.75 3.75a.75.75 0 11-1.06-1.06l3.75-3.75-1.543-1.543A.25.25 0 0111.604 1h4.146a.25.25 0 01.25.25zM2.75 3.5a.25.25 0 00-.25.25v7.5c0 .138.112.25.25.25h2a.75.75 0 01.75.75v2.19l2.72-2.72a.75.75 0 01.53-.22h4.5a.25.25 0 00.25-.25v-2.5a.75.75 0 111.5 0v2.5A1.75 1.75 0 0113.25 13H9.06l-2.573 2.573A1.457 1.457 0 014 14.543V13H2.75A1.75 1.75 0 011 11.25v-7.5C1 2.784 1.784 2 2.75 2h5.5a.75.75 0 010 1.5h-5.5z"></path>
+                            </svg>
+                        </div>
+                        <p class="font-sans text-sm text-gray-600">This was referenced 27 days ago</p>
+                    </div>
+                    <div class="flex flex-col md:flex-row ml-28 justify-between">
+                        <p class="font-sans font-semibold cursor-pointer hover:text-blue-500 hover:underline">Duplicate places integrations are being maintained <span class="text-gray-500">#203</span></p>
+                        <div class="inline-flex justify-center h-6 w-20 rounded-3xl bg-red-500 items-center">
+                            <svg class="w-3 h-3 text-white fill-current" viewBox="0 0 16 16" version="1.1" aria-hidden="true">
+                                <path fill-rule="evenodd" d="M1.5 8a6.5 6.5 0 0110.65-5.003.75.75 0 00.959-1.153 8 8 0 102.592 8.33.75.75 0 10-1.444-.407A6.5 6.5 0 011.5 8zM8 12a1 1 0 100-2 1 1 0 000 2zm0-8a.75.75 0 01.75.75v3.5a.75.75 0 11-1.5 0v-3.5A.75.75 0 018 4zm4.78 4.28l3-3a.75.75 0 00-1.06-1.06l-2.47 2.47-.97-.97a.749.749 0 10-1.06 1.06l1.5 1.5a.75.75 0 001.06 0z"></path>
+                            </svg>
+                            <p class="font-sans text-white text-xs ml-1 whitespace-nowrap">Closed</p>
+                        </div>
+                    </div>
+                    <div class="flex flex-col md:flex-row ml-28 justify-between">
+                        <p class="font-sans font-semibold cursor-pointer hover:text-blue-500 hover:underline">Redirect to Svelte Society website <span class="text-gray-500">#448</span></p>
+                        <div class="inline-flex justify-center h-6 w-24 rounded-3xl bg-purple-600 items-center">
+                            <svg class="w-3 h-3 text-white fill-current" viewBox="0 0 16 16" version="1.1" aria-hidden="true">
+                                <path fill-rule="evenodd" d="M5 3.254V3.25v.005a.75.75 0 110-.005v.004zm.45 1.9a2.25 2.25 0 10-1.95.218v5.256a2.25 2.25 0 101.5 0V7.123A5.735 5.735 0 009.25 9h1.378a2.251 2.251 0 100-1.5H9.25a4.25 4.25 0 01-3.8-2.346zM12.75 9a.75.75 0 100-1.5.75.75 0 000 1.5zm-8.5 4.5a.75.75 0 100-1.5.75.75 0 000 1.5z"></path>
+                            </svg>
+                            <p class="font-sans text-white text-xs ml-1">Merged</p>
+                        </div>
+                    </div>   
+                </div>
+                <div class="bg-gray-200 w-0.5 h-40 sm:h-36 md:h-32 -mt-36 sm:-mt-32 md:-mt-24 ml-20 -mx-6"></div>
+                <div class="bg-gray-200 w-full h-0.5"></div>        
             </div>
             <div class="flex flex-col divide-y my-6 h-full w-full md:w-1/4 mt-4">
                 <GithubSidebarItem sidebarItemTitle={"Assignees"} sidebarItemDetail={"No one assigned"} />
@@ -73,9 +108,69 @@
                     </div>
                 </div>
             </div>
-        </div>    
+        </div>
+        <div class="flex flex-col space-y-4 w-full md:w-2/3 ml-0 md:ml-12 mt-4">
+            <div class="flex flex-row w-full space-x-2">
+                <img class="w-10 h-10 rounded-full hidden sm:flex" src="https://avatars.githubusercontent.com/u/54399105?s=80&v=4" alt="" />
+                <div class="flex flex-col divide-y divide-gray-200 border w-full md:max-w-4xl h-full rounded-md">
+                    <div class="w-full h-full">
+                        <div class="flex flex-col space-y-2 lg:space-y-0 lg:flex-row w-full px-4 py-4 justify-between bg-gray-100">
+                            <div class="flex flex-row space-x-6">
+                                <p class="font-sans text-sm ml-2 w-1/2 text-center relative z-20">Write</p>
+                                <p class="font-sans text-sm w-1/2 text-center text-gray-500">Preview</p>
+                            </div>
+                            <div class="bg-white hidden lg:flex w-14 h-12 border-t rounded-t-md absolute z-0"></div>
+                            <div class="hidden md:flex flex-row items-center space-x-4 md:space-x-10">
+                                <GithubAddCommentIconItem firstIcon={"header"} secondIcon={"bold"} thirdIcon={"italic"}  />
+                                <GithubAddCommentIconItem firstIcon={"quote"} secondIcon={"code"} thirdIcon={"link"}  />
+                                <GithubAddCommentIconItem firstIcon={"list"} secondIcon={"list2"} thirdIcon={"tasklist"}  />
+                                <GithubAddCommentIconItem firstIcon={"mention"} secondIcon={"reference"} thirdIcon={"insert"}  />
+                            </div>
+                            <div class="flex md:hidden flex-row justify-between">
+                                <div class="">
+                                    <svg class="w-4 h-4 text-gray-500 fill-current cursor-pointer hover:text-blue-500" aria-hidden="true" viewBox="0 0 16 16" version="1.1" data-view-component="true">
+                                        <path fill-rule="evenodd" d="M6.21 8.5L4.574 3.594 2.857 8.5H6.21zm.5 1.5l.829 2.487a.75.75 0 001.423-.474L5.735 2.332a1.216 1.216 0 00-2.302-.018l-3.39 9.688a.75.75 0 001.415.496L2.332 10H6.71zm3.13-4.358C10.53 4.374 11.87 4 13 4c1.5 0 3 .939 3 2.601v5.649a.75.75 0 01-1.448.275C13.995 12.82 13.3 13 12.5 13c-.77 0-1.514-.231-2.078-.709-.577-.488-.922-1.199-.922-2.041 0-.694.265-1.411.887-1.944C11 7.78 11.88 7.5 13 7.5h1.5v-.899c0-.54-.5-1.101-1.5-1.101-.869 0-1.528.282-1.84.858a.75.75 0 11-1.32-.716zM14.5 9H13c-.881 0-1.375.22-1.637.444-.253.217-.363.5-.363.806 0 .408.155.697.39.896.249.21.63.354 1.11.354.732 0 1.26-.209 1.588-.449.35-.257.412-.495.412-.551V9z"></path>
+                                    </svg>
+                                </div>
+                                <div class="flex flex-row items-center space-x-6">
+                                    <GithubAddCommentIcons type={"quote"} />
+                                    <GithubAddCommentIcons type={"code"} />
+                                    <GithubAddCommentIcons type={"link"} />
+                                    <GithubAddCommentIcons type={"mention"} />
+                                    <GithubAddCommentIcons type={"reference"} />
+                                    <GithubAddCommentIcons type={"insert"} />
+                                </div>
+                            </div>
+                        </div>
+                        <div class="bg-white p-3">
+                            <div class="flex flex-col cursor-pointer">
+                                <textarea placeholder="Leave a comment" class="w-full rounded-t-md font-sans p-2 text-sm text-gray-600 h-24 resize-y bg-gray-100 focus:outline-none" />
+                                <div class="flex flex-row justify-between rounded-b-md bg-gray-100 border-t-2 border-dotted">
+                                    <p class="font-sans p-2 text-sm text-gray-600">Attach files by dragging & dropping,selecting or pasting them.</p>
+                                    <svg class="w-4 h-4 text-gray-600 fill-current m-2" viewBox="0 0 16 16" version="1.1" aria-hidden="true">
+                                        <path fill-rule="evenodd" d="M14.85 3H1.15C.52 3 0 3.52 0 4.15v7.69C0 12.48.52 13 1.15 13h13.69c.64 0 1.15-.52 1.15-1.15v-7.7C16 3.52 15.48 3 14.85 3zM9 11H7V8L5.5 9.92 4 8v3H2V5h2l1.5 2L7 5h2v6zm2.99.5L9.5 8H11V5h2v3h1.5l-2.51 3.5z"></path>
+                                    </svg>
+                                </div>
+                            </div>
+                            <div class="flex justify-end">
+                                <button disabled={true} class="px-4 py-1 mt-2 font-medium bg-green-700 rounded-md text-white opacity-50 font-sans text-sm">Comment</button>
+                            </div> 
+                        </div>
+                    </div>
+                </div>       
+            </div>
+            <div class="flex flex-row items-center space-x-2 mt-4 pl-0 md:pl-16">
+                <svg class="w-4 h-4 text-gray-600 fill-current" viewBox="0 0 16 16" version="1.1" aria-hidden="true">
+                    <path fill-rule="evenodd" d="M8 1.5a6.5 6.5 0 100 13 6.5 6.5 0 000-13zM0 8a8 8 0 1116 0A8 8 0 010 8zm6.5-.25A.75.75 0 017.25 7h1a.75.75 0 01.75.75v2.75h.25a.75.75 0 010 1.5h-2a.75.75 0 010-1.5h.25v-2h-.25a.75.75 0 01-.75-.75zM8 6a1 1 0 100-2 1 1 0 000 2z"></path>
+                </svg>
+                <p class="font-sans text-gray-600 text-xs">Remember, contributions to this repository should follow our <span class="text-blue-500 cursor-pointer hover:underline">GitHub Community Guidelines.</span></p>
+            </div> 
+        </div>
+        
+        
+        
     </div>
-    <div class="flex flex-col space-y-2 lg:space-y-0 lg:flex-row items-center justify-center lg:justify-start border-t px-8 py-12">
+    <div class="flex flex-col space-y-2 lg:space-y-0 lg:flex-row items-center justify-center lg:justify-between border-t px-8 py-12">
        <div class="flex flex-row space-x-4 lg:space-x-8 xl:space-x-14">
             <p class="font-sans text-xs sm:text-sm lg:text-xs text-gray-600 whitespace-nowrap">© 2021 GitHub, Inc.</p>
             <p class="font-sans text-xs sm:text-sm lg:text-xs text-blue-500 hover:underline cursor-pointer">Terms</p>

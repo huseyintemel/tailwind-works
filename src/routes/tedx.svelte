@@ -1,6 +1,6 @@
 <script>
     import TedxAboutItemDetail from "../components/TedxAboutItemDetail.svelte";
-import TedxAboutItem from "./TedxAboutItem.svelte";
+    import TedxAboutItem from "../components/TedxAboutItem.svelte";
 </script>
 <div class="flex flex-col mx-20 my-8 divide-y-2">
     <div class="flex md:flex-row flex-col justify-between">
