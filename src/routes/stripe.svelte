@@ -2,10 +2,11 @@
     import StripeExploreItem from "../components/StripeExploreItem.svelte";
     import StripeImageItem from "../components/StripeImageItem.svelte";
     import StripeNav from "../components/StripeNav.svelte";
+    import StripeProductItem from "../components/StripeProductItem.svelte";
 </script>
 
 <StripeNav />
-<div class="flex flex-col max-w-6xl mb-32 w-full mx-auto">
+<div class="flex flex-col max-w-6xl mb-16 w-full mx-auto">
     <div class="bg-pink-50 mt-8 py-7 px-8 w-full">
         <div class="flex flex-col space-y-3">
             <div class="flex flex-row justify-between items-center space-x-1">
@@ -27,7 +28,7 @@
            </div>
         </div>
     </div>
-    <div class="flex flex-col px-6 sm:px-12 xl:px-6">
+    <div class="flex flex-col px-6 md:px-12 xl:px-6">
         <div class="flex flex-col space-y-2">
             <p class="font-sans font-bold text-3xl mt-8">Documentation</p>
             <p class="font-sans text-gray-600 text-2xl">Explore our guides and examples to integrate Stripe.</p>
@@ -59,7 +60,7 @@
             <div class="w-0.5 h-full bg-gray-200 absolute right-1/2"></div>
             <div class="w-0.5 h-16 bg-white absolute right-1/2"></div>
         </div>
-        <div class="hidden md:flex flex-col space-y-4">
+        <div class="hidden md:flex flex-col mt-10 space-y-4">
             <p class="font-sans font-bold text-xl mt-8">Explore using Stripe</p>
             <div class="grid grid-cols-3 gap-8 pt-6">
                 <StripeExploreItem type={"developer"} exploreItemTitle={"Developer Tools"} exploreItemDetailText={"Get up and running with libraries, keys, and integration tools."} />
@@ -68,12 +69,89 @@
             </div>
         </div>
     </div>
+    <div class="flex flex-col mt-16 pb-24 px-6 md:px-12 xl:px-6">
+        <p class="font-sans font-bold text-xl pt-8">Explore Stripe products </p>
+        <div class="flex flex-col sm:flex-row mt-8">
+            <div class="flex flex-col py-8 w-full sm:w-1/2 space-y-6">
+                <div class="flex flex-col space-y-6">
+                    <p class="font-sans font-semibold">Direct payments</p>
+                    <StripeProductItem type={"payments"} productitemTitle={"Payments"} productitemDetail={"Online Payments"} />
+                    <StripeProductItem type={"invoicing"} productitemTitle={"Invoicing"} productitemDetail={"One-off invoices"} />
+                    <StripeProductItem type={"billing"} productitemTitle={"Billing"} productitemDetail={"Subscriptions and recurring payments"} />
+                    <StripeProductItem type={"terminal"} productitemTitle={"Terminal"} productitemDetail={"In-person and omnichannel payments"} />
+                </div>
+                <div class="flex flex-col space-y-6">
+                    <p class="font-sans font-semibold">Multiparty payments</p>
+                    <StripeProductItem type={"connect"} productitemTitle={"Connect"} productitemDetail={"Payments for platforms and marketplaces"} />
+                </div>
+                <div class="flex flex-col space-y-6">
+                    <p class="font-sans font-semibold">Prebuilt components</p>
+                    <StripeProductItem type={"checkout"} productitemTitle={"Checkout"} productitemDetail={"Prebuilt, Stripe hosted checkout page"} />
+                    <StripeProductItem type={"elements"} productitemTitle={"Elements"} productitemDetail={"Secure frontend UI components"} />
+                </div>
+            </div>
+            <div class="flex flex-col py-8 px-0 sm:px-12 w-full sm:w-1/2 bg-white md:bg-gray-100 rounded space-y-6">
+                <div class="flex flex-col space-y-6">
+                    <p class="font-sans font-semibold">Business operations</p>
+                    <StripeProductItem type={"radar"} productitemTitle={"Radar"} productitemDetail={"Fraud and risk management"} />
+                    <StripeProductItem type={"sigma"} productitemTitle={"Sigma"} productitemDetail={"Custom reports"} />
+                    <StripeProductItem type={"climate"} productitemTitle={"Climate"} productitemDetail={"Remove carbon as you grow your business"} />
+                    <StripeProductItem type={"atlas"} productitemTitle={"Atlas"} productitemDetail={"Startup incorporation"} />
+                    <StripeProductItem type={"identity"} productitemTitle={"Identity"} productitemDetail={"Identity verification"} />
+                </div>
+                <div class="flex flex-col space-y-6">
+                    <p class="font-sans font-semibold">Financial services</p>
+                    <StripeProductItem type={"issuing"} productitemTitle={"Issuing"} productitemDetail={"Card creation"} />
+                    <StripeProductItem type={"corporate"} productitemTitle={"Corporate card"} productitemDetail={"Spend management"} />
+                    <StripeProductItem type={"capital"} productitemTitle={"Capital"} productitemDetail={"Business financing"} />
+                </div>
+            </div>   
+        </div>
+    </div>
+    <div class="flex flex-col sm:flex-row border-t py-6 px-6 md:px-12 xl:px-6">
+        <div class="flex flex-col w-full sm:w-1/2 space-y-3">
+            <div class="flex flex-row space-x-3 items-center">
+                <svg class="w-4 h-4 text-gray-600 fill-current" aria-hidden="true" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M8 16A8 8 0 1 1 8 0a8 8 0 0 1 0 16zm3.756-13.908l-1.283 1.561C9.743 3.238 8.9 3 8 3s-1.744.238-2.473.653L4.244 2.092a7.037 7.037 0 0 0-2.152 2.152l1.561 1.283C3.238 6.257 3 7.1 3 8s.238 1.744.653 2.473l-1.561 1.283a7.037 7.037 0 0 0 2.152 2.152l1.283-1.561C6.257 12.762 7.1 13 8 13s1.744-.238 2.473-.653l1.283 1.561a7.037 7.037 0 0 0 2.152-2.152l-1.561-1.283C12.762 9.743 13 8.9 13 8s-.238-1.744-.653-2.473l1.561-1.283a7.037 7.037 0 0 0-2.152-2.152zM8 13A5 5 0 1 1 8 3a5 5 0 0 1 0 10zm0-1a4 4 0 1 0 0-8 4 4 0 0 0 0 8z"></path>
+                </svg>
+                <div class="flex flex-row space-x-1">
+                    <p class="font-sans font-medium text-sm text-gray-800">Questions</p>
+                    <p class="font-sans text-sm text-blue-600 font-medium hover:text-black whitespace-nowrap cursor-pointer">Contact Us</p>
+                </div>
+            </div>
+            <div class="flex flex-row space-x-3 items-center">
+                <svg class="w-4 h-4 text-gray-600 fill-current" aria-hidden="true" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M2 2h7a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2zm11 4l2.18-1.883a.5.5 0 0 1 .82.385v7.002a.5.5 0 0 1-.82.385L13 10z" fill-rule="evenodd" class="st-current"></path>
+                </svg>
+                <div class="flex flex-row space-x-1">
+                    <p class="font-sans font-medium text-sm text-gray-800">Developer tutorials on</p>
+                    <p class="font-sans text-sm text-blue-600 font-medium hover:text-black whitespace-nowrap cursor-pointer">Youtube</p>
+                </div>
+            </div>
+            <div class="flex lg:hidden flex-row space-x-3">
+                <svg class="w-4 h-4" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16"><g fill="none" fill-rule="evenodd"><path fill="#E25950" fill-rule="nonzero" d="M14 14H2a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2z"></path><path fill="#F6F9FC" fill-rule="nonzero" d="M0 11h16v1H0v-1zm14 3H2a2 2 0 0 1-1.732-1h15.464A2 2 0 0 1 14 14zM0 9h16v1H0V9zm8-2h8v1H8V7zm0-2h8v1H8V5zm0-2h7.723c.171.295.277.634.277 1H8V3z"></path><path fill="#E25950" fill-rule="nonzero" d="M14 14H2a2 2 0 0 1-2-2V8h1v4a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1V4a1 1 0 0 0-1-1H8V2h6a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2z" opacity=".1"></path><path fill="#43458B" fill-rule="nonzero" d="M0 8V3.714C0 2.768.796 2 1.778 2H8v6H0z"></path>
+                    <path fill="#FFF" fill-rule="nonzero" d="M7.026 5.501a.5.5 0 1 1-1 0 .5.5 0 0 1 1 0zM5.518 5a.5.5 0 1 1-.038-1 .5.5 0 0 1 .038 1zm-.492.501a.5.5 0 1 1-1 0 .5.5 0 0 1 1 0zM3.518 5a.5.5 0 1 1-.038-1 .5.5 0 0 1 .038 1zm-.492.501a.5.5 0 1 1-1 0 .5.5 0 0 1 1 0zm4-2a.5.5 0 1 1-1 0 .5.5 0 0 1 1 0zm-2 0a.5.5 0 1 1-1 0 .5.5 0 0 1 1 0zm-2 0a.5.5 0 1 1-1 0 .5.5 0 0 1 1 0zm-1.507 1.5a.5.5 0 1 1-.038-.999.5.5 0 0 1 .038 1zm.014 1A.5.5 0 1 1 1.57 7a.5.5 0 0 1-.037-1zm2 0A.5.5 0 1 1 3.57 7a.5.5 0 0 1-.037-1zm2 0A.5.5 0 1 1 5.57 7a.5.5 0 0 1-.037-1z"></path><path fill="#FFF" d="M6.533 7a.5.5 0 1 1 .037 1 .5.5 0 0 1-.037-1zm-2 0a.5.5 0 1 1 .037 1 .5.5 0 0 1-.037-1zm-2 0a.5.5 0 1 1 .037 1 .5.5 0 0 1-.037-1zM.482 7a.5.5 0 1 1 .036 1 .5.5 0 0 1-.036-1zm0-2a.5.5 0 1 1 .036 1 .5.5 0 0 1-.036-1zm0-2a.5.5 0 1 1 .036 1 .5.5 0 0 1-.036-1zm1-1a.5.5 0 1 1 .036 1 .5.5 0 0 1-.036-1zm2 0a.5.5 0 1 1 .036 1 .5.5 0 0 1-.036-1zm2 0a.5.5 0 1 1 .036 1 .5.5 0 0 1-.036-1zm2 0a.5.5 0 1 1 .036 1 .5.5 0 0 1-.036-1zm0 2a.5.5 0 1 1 .036 1 .5.5 0 0 1-.036-1zm0 2a.5.5 0 1 1 .036 1 .5.5 0 0 1-.036-1z" opacity=".5"></path></g>
+                </svg>
+                <svg class="w-4 h-4 text-gray-500 fill-current" xmlns="http://www.w3.org/2000/svg" viewBox="2 2 16 16" aria-hidden="true" height="16" width="16">
+                    <path d="M11.6 13.1l-2 2.5c-.3.3-.7.3-.9 0-.1-.1-.2-.3-.2-.5v-2c-2.5-.5-4-2.3-4-4.4 0-2.5 2.1-4.5 5.5-4.5s5.5 2 5.5 4.5c-.1 2.3-1.7 4.1-3.9 4.4z"></path>
+                </svg>    
+            </div>
+        </div>
+        <div class="flex flex-col w-full sm:w-1/2 space-y-2 mt-6">
+            <p class="font-sans text-sm text-gray-900 font-medium">Sign up for developer updates:</p>
+            <div class="inline-flex items-center rounded border w-full">
+                <input class="w-full focus:outline-none px-4"> 
+                <button disabled={true} class="px-4 py-1 whitespace-nowrap font-sans font-medium text-gray-400">Sign Up</button>
+            </div>
+            <p class="font-sans text-xs">You can unsubscribe at any time. Read our<span class="cursor-pointer ml-1 text-blue-500 hover:text-black">privacy policy</span></p>
+        </div>
+    </div>
 </div>
-<div class="hidden lg:flex flex-col space-y-1 fixed left-6 bottom-4">
+<div class="hidden lg:flex flex-col space-y-3 fixed left-6 bottom-4">
     <svg class="w-4 h-4" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16"><g fill="none" fill-rule="evenodd"><path fill="#E25950" fill-rule="nonzero" d="M14 14H2a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2z"></path><path fill="#F6F9FC" fill-rule="nonzero" d="M0 11h16v1H0v-1zm14 3H2a2 2 0 0 1-1.732-1h15.464A2 2 0 0 1 14 14zM0 9h16v1H0V9zm8-2h8v1H8V7zm0-2h8v1H8V5zm0-2h7.723c.171.295.277.634.277 1H8V3z"></path><path fill="#E25950" fill-rule="nonzero" d="M14 14H2a2 2 0 0 1-2-2V8h1v4a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1V4a1 1 0 0 0-1-1H8V2h6a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2z" opacity=".1"></path><path fill="#43458B" fill-rule="nonzero" d="M0 8V3.714C0 2.768.796 2 1.778 2H8v6H0z"></path>
         <path fill="#FFF" fill-rule="nonzero" d="M7.026 5.501a.5.5 0 1 1-1 0 .5.5 0 0 1 1 0zM5.518 5a.5.5 0 1 1-.038-1 .5.5 0 0 1 .038 1zm-.492.501a.5.5 0 1 1-1 0 .5.5 0 0 1 1 0zM3.518 5a.5.5 0 1 1-.038-1 .5.5 0 0 1 .038 1zm-.492.501a.5.5 0 1 1-1 0 .5.5 0 0 1 1 0zm4-2a.5.5 0 1 1-1 0 .5.5 0 0 1 1 0zm-2 0a.5.5 0 1 1-1 0 .5.5 0 0 1 1 0zm-2 0a.5.5 0 1 1-1 0 .5.5 0 0 1 1 0zm-1.507 1.5a.5.5 0 1 1-.038-.999.5.5 0 0 1 .038 1zm.014 1A.5.5 0 1 1 1.57 7a.5.5 0 0 1-.037-1zm2 0A.5.5 0 1 1 3.57 7a.5.5 0 0 1-.037-1zm2 0A.5.5 0 1 1 5.57 7a.5.5 0 0 1-.037-1z"></path><path fill="#FFF" d="M6.533 7a.5.5 0 1 1 .037 1 .5.5 0 0 1-.037-1zm-2 0a.5.5 0 1 1 .037 1 .5.5 0 0 1-.037-1zm-2 0a.5.5 0 1 1 .037 1 .5.5 0 0 1-.037-1zM.482 7a.5.5 0 1 1 .036 1 .5.5 0 0 1-.036-1zm0-2a.5.5 0 1 1 .036 1 .5.5 0 0 1-.036-1zm0-2a.5.5 0 1 1 .036 1 .5.5 0 0 1-.036-1zm1-1a.5.5 0 1 1 .036 1 .5.5 0 0 1-.036-1zm2 0a.5.5 0 1 1 .036 1 .5.5 0 0 1-.036-1zm2 0a.5.5 0 1 1 .036 1 .5.5 0 0 1-.036-1zm2 0a.5.5 0 1 1 .036 1 .5.5 0 0 1-.036-1zm0 2a.5.5 0 1 1 .036 1 .5.5 0 0 1-.036-1zm0 2a.5.5 0 1 1 .036 1 .5.5 0 0 1-.036-1z" opacity=".5"></path></g>
     </svg>
-    <svg class="w-4 h-4 text-gray-600 fill-current" xmlns="http://www.w3.org/2000/svg" viewBox="2 2 16 16" aria-hidden="true" height="16" width="16">
+    <svg class="w-4 h-4 text-gray-400 fill-current" xmlns="http://www.w3.org/2000/svg" viewBox="2 2 16 16" aria-hidden="true" height="16" width="16">
         <path d="M11.6 13.1l-2 2.5c-.3.3-.7.3-.9 0-.1-.1-.2-.3-.2-.5v-2c-2.5-.5-4-2.3-4-4.4 0-2.5 2.1-4.5 5.5-4.5s5.5 2 5.5 4.5c-.1 2.3-1.7 4.1-3.9 4.4z"></path>
     </svg>    
 </div>
