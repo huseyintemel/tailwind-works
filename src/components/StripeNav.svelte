@@ -1,5 +1,23 @@
 <script>
     import StripeLinkItem from "./StripeLinkItem.svelte";
+
+    let itemLinks = [];
+
+    let linkTexts = ["Home","Payments","Business operations","Financial Services","Developer Tools","Security","All products"];
+
+    let selected = false;
+
+    function itemClicked(index){
+        itemLinks.forEach(function(item, i) {
+            if(index == i){
+                item.select();
+            }
+            else{
+                item.deselect();
+            }
+        });
+    }
+
 </script>
 
 <div class="flex flex-col space-y-0 lg:space-y-4 border-b border-t bg-white sm:bg-gray-100 w-full sticky top-0 z-20">
@@ -28,13 +46,9 @@
     </div>
     <div class="hidden lg:flex flex-row justify-between px-6">
         <div class="flex flex-row space-x-4">
-            <StripeLinkItem selected={"true"} linkText={"Home"} />
-            <StripeLinkItem linkText={"Payments"} />
-            <StripeLinkItem linkText={"Business operations"} />
-            <StripeLinkItem linkText={"Financial Services"} />
-            <StripeLinkItem linkText={"Developer Tools"} />
-            <StripeLinkItem linkText={"Security"} />
-            <StripeLinkItem linkText={"All products"} />
+            {#each linkTexts as text,i}
+                <StripeLinkItem selected={i == 0 ? true : false } onClicked={()=>itemClicked(i)} bind:this={itemLinks[i]} linkText={text} />
+            {/each}
         </div>
         <div class="flex flex-row space-x-4">
             <StripeLinkItem hasIcon={true} linkText={"APIs & SDKs"} />
