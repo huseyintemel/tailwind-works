@@ -9,7 +9,7 @@
 <div class="flex flex-row items-center cursor-pointer">
     <StripeProductItemIcons type={type} />
     <div class="flex flex-col px-4 space-y-1">
-        <p class="font-sans font-semibold text-sm">{productitemTitle}</p>
-        <p class="font-sans text-sm text-gray-600 break-words">{productitemDetail}</p>
+        <p class="font-sans font-semibold text-gray-800 text-sm">{productitemTitle}</p>
+        <p class="font-sans text-sm text-gray-700 break-words">{productitemDetail}</p>
     </div>
 </div>

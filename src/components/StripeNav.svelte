@@ -40,7 +40,7 @@
             </div>
         </div>
         <div class="flex flex-row items-center space-x-4 py-1">
-            <p class="font-sans hover:text-black text-sm font-medium text-blue-600 whitespace-nowrap">Create Account</p>
+            <p class="font-sans cursor-pointer hover:text-gray-800 text-sm font-medium text-blue-600 whitespace-nowrap">Create Account</p>
             <button class="text-sm font-medium font-sans bg-white px-2 py-1 rounded border border-gray-300 whitespace-nowrap hover:shadow-md focus:outline-none">Sign in</button>
         </div>
     </div>
@@ -57,14 +57,14 @@
     </div> 
     <div class="flex lg:hidden flex-row justify-between items-center py-6 px-6 md:px-10">
         <div class="flex flex-row items-center space-x-1">
-            <p class="font-sans font-medium text-gray-600">Home</p>
-            <svg class="h-4 w-4 mt-1 text-gray-600" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <p class="font-sans font-medium text-gray-700">Home</p>
+            <svg class="h-4 w-4 mt-1 text-gray-700" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
             </svg>
         </div>
         <div class="flex flex-row items-center space-x-1">
-            <p class="font-sans text-sm font-medium text-gray-800">Sign in</p>
-            <svg class="h-6 w-6 text-gray-800" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <p class="font-sans text-sm font-medium cursor-pointer text-gray-700">Sign in</p>
+            <svg class="h-6 w-6 text-gray-700" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7l5 5m0 0l-5 5m5-5H6" />
             </svg>
         </div>
